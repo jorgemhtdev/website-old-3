@@ -6,12 +6,15 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `jorgemhtdev`,
+    siteTitleAlt: `jorgemht.dev`,
+    siteUrl: `https://jorgemht.dev`,
+    siteLanguage: `es`,
+    author: `@jorgemhtdev`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme's README for all available options
       options: {
         navigation: [
           {
@@ -26,11 +29,11 @@ module.exports = {
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            url: `https://twitter.com/jorgemhtdev`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `Github`,
+            url: `https://github.com/jorgemhtdev`,
           },
         ],
       },

@@ -78722,7 +78722,7 @@ module.exports = function(module) {
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":{\"minimalBlogConfig\":{\"basePath\":\"/\",\"blogPath\":\"/blog\",\"postsPath\":\"content/posts\",\"pagesPath\":\"content/pages\",\"tagsPath\":\"/tags\",\"externalLinks\":[{\"name\":\"Twitter\",\"url\":\"https://twitter.com/lekoarts_de\"},{\"name\":\"Instagram\",\"url\":\"https://www.instagram.com/lekoarts.de/\"}],\"navigation\":[{\"title\":\"Blog\",\"slug\":\"/blog\"},{\"title\":\"About\",\"slug\":\"/about\"}],\"showLineNumbers\":true,\"showCopyButton\":true}}}");
+module.exports = JSON.parse("{\"data\":{\"minimalBlogConfig\":{\"basePath\":\"/\",\"blogPath\":\"/blog\",\"postsPath\":\"content/posts\",\"pagesPath\":\"content/pages\",\"tagsPath\":\"/tags\",\"externalLinks\":[{\"name\":\"Twitter\",\"url\":\"https://twitter.com/jorgemhtdev\"},{\"name\":\"Github\",\"url\":\"https://github.com/jorgemhtdev\"}],\"navigation\":[{\"title\":\"Blog\",\"slug\":\"/blog\"},{\"title\":\"About\",\"slug\":\"/about\"}],\"showLineNumbers\":true,\"showCopyButton\":true}}}");
 
 /***/ }),
 
