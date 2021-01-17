@@ -3,8 +3,8 @@
 module.exports = {
   url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Blog by Jorgemht.dev',
+  subtitle: 'Aprender. Crear. Contribuir.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -12,22 +12,22 @@ module.exports = {
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
+      label: 'Post',
       path: '/'
     },
     {
-      label: 'About me',
+      label: 'Sobre mí',
       path: '/pages/about'
     },
     {
-      label: 'Contact me',
+      label: 'Contactme',
       path: '/pages/contacts'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Jorgemht.dev',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Aprender. Crear. Contribuir.',
     contacts: {
       email: '',
       facebook: '#',
