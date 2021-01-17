@@ -1,80 +1,244 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+'use strict';
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const siteConfig = require('./config.js');
+const postCssPlugins = require('./postcss-config.js');
 
 module.exports = {
+  pathPrefix: siteConfig.pathPrefix,
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    url: siteConfig.url,
+    title: siteConfig.title,
+    subtitle: siteConfig.subtitle,
+    copyright: siteConfig.copyright,
+    disqusShortname: siteConfig.disqusShortname,
+    menu: siteConfig.menu,
+    author: siteConfig.author
   },
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme's README for all available options
+      resolve: 'gatsby-source-filesystem',
       options: {
-        navigation: [
+        path: `${__dirname}/static`,
+        name: 'assets'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/media`,
+        name: 'media'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content`,
+        name: 'pages'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'css',
+        path: `${__dirname}/static/css`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
           {
-            title: `Blog`,
-            slug: `/blog`,
+            site {
+              siteMetadata {
+                site_url: url
+                title
+                description: subtitle
+              }
+            }
+          }
+        `,
+        feeds: [{
+          serialize: ({ query: { site, allMarkdownRemark } }) => (
+            allMarkdownRemark.edges.map((edge) => ({
+              ...edge.node.frontmatter,
+              description: edge.node.frontmatter.description,
+              date: edge.node.frontmatter.date,
+              url: site.siteMetadata.site_url + edge.node.fields.slug,
+              guid: site.siteMetadata.site_url + edge.node.fields.slug,
+              custom_elements: [{ 'content:encoded': edge.node.html }]
+            }))
+          ),
+          query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+                ) {
+                  edges {
+                    node {
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        template
+                        draft
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+          output: '/rss.xml',
+          title: siteConfig.title
+        }]
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-relative-images',
+          {
+            resolve: 'gatsby-remark-katex',
+            options: {
+              strict: 'ignore'
+            }
           },
           {
-            title: `About`,
-            slug: `/about`,
-          },
-        ],
-        externalLinks: [
-          {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 960,
+              withWebp: true
+            }
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            resolve: 'gatsby-remark-responsive-iframe',
+            options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
           },
-        ],
+          'gatsby-remark-autolink-headers',
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-external-links'
+        ]
+      }
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/index.js`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [siteConfig.googleAnalyticsId],
+        pluginConfig: {
+          head: true
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl: url
+              }
+            }
+            allSitePage(
+              filter: {
+                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+              }
+            ) {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+          }
+        `,
+        output: '/sitemap.xml',
+        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
+          url: site.siteMetadata.siteUrl + edge.node.path,
+          changefreq: 'daily',
+          priority: 0.7
+        }))
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: siteConfig.title,
+        short_name: siteConfig.title,
+        start_url: '/',
+        background_color: '#FFF',
+        theme_color: '#F7A046',
+        display: 'standalone',
+        icon: 'static/photo.jpg'
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-offline',
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        workboxConfig: {
+          runtimeCaching: [{
+            // Use cacheFirst since these don't need to be revalidated (same RegExp
+            // and same reason as above)
+            urlPattern: /(\.js$|\.css$|[^:]static\/)/,
+            handler: 'CacheFirst',
+          },
+          {
+            // page-data.json files, static query results and app-data.json
+            // are not content hashed
+            urlPattern: /^https?:.*\/page-data\/.*\.json/,
+            handler: 'StaleWhileRevalidate',
+          },
+          {
+            // Add runtime caching of various other page resources
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+            handler: 'StaleWhileRevalidate',
+          },
+          {
+            // Google Fonts CSS (doesn't end in .css so we need to specify it)
+            urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+            handler: 'StaleWhileRevalidate',
+          },
+          ],
+        },
       },
     },
-    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-sass',
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#6B46C1`,
-        display: `standalone`,
-        icons: [
-          {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
+        implementation: require('sass'),
+        postCssPlugins: [...postCssPlugins],
+        cssLoaderOptions: {
+          camelCase: false
+        }
+      }
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
-    shouldAnalyseBundle && {
-      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+    {
+      resolve: '@sentry/gatsby',
       options: {
-        analyzerMode: `static`,
-        reportFilename: `_bundle.html`,
-        openAnalyzer: false,
-      },
+        dsn: process.env.SENTRY_DSN,
+        tracesSampleRate: 1
+      }
     },
-  ].filter(Boolean),
-}
+    'gatsby-plugin-flow',
+    'gatsby-plugin-optimize-svgs'
+  ]
+};
