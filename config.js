@@ -29,10 +29,22 @@ module.exports = {
     photo: '/photo.jpg',
     bio: 'Aprender. Crear. Contribuir.',
     contacts: {
+      email: '',
+      facebook: '',
+      telegram: '',
       twitter: 'https://twitter.com/jorgemhtdev',
       github: 'https://github.com/jorgemhtdev',
       youtube: 'https://www.youtube.com/channel/UCpXxJL296s-gYd3OUu4Cpfw',
+      rss: '',
+      vkontakte: '',
       linkedin: 'https://es.linkedin.com/in/jorgemht',
+      instagram: '',
+      line: '',
+      gitlab: '',
+      weibo: '',
+      codepen: '',
+      soundcloud: '',
+      medium: '',
     }
   }
 };
