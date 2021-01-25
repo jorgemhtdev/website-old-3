@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Swift - Etiqueta - Jorgemht.dev</title>
+        <link>https://jorgemht.dev/tags/swift/</link>
+        <description>Swift - Etiqueta - Jorgemht.dev</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 25 Jan 2021 10:09:00 &#43;0000</lastBuildDate><atom:link href="https://jorgemht.dev/tags/swift/" rel="self" type="application/rss+xml" /><item>
+    <title>Example</title>
+    <link>https://jorgemht.dev/posts/guia-swift/</link>
+    <pubDate>Mon, 25 Jan 2021 10:09:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>https://jorgemht.dev/posts/guia-swift/</guid>
+    <description><![CDATA[  ]]></description>
+</item></channel>
+</rss>
