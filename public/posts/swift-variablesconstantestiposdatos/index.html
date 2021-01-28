@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Variables, Constantes y Tipos de datos | </title><meta name="Description" content="Variables, constantes y tipos de datos en Swift 5.3"><meta property="og:title" content="Variables, Constantes y Tipos de datos" />
+<meta property="og:description" content="Variables, constantes y tipos de datos en Swift 5.3" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/" />
+<meta property="og:image" content="https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/featured-image.png"/>
+<meta property="article:published_time" content="2021-01-28T10:10:00+00:00" />
+<meta property="article:modified_time" content="2021-01-28T10:10:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/featured-image.png"/>
+<meta name="twitter:title" content="Variables, Constantes y Tipos de datos"/>
+<meta name="twitter:description" content="Variables, constantes y tipos de datos en Swift 5.3"/>
+<meta name="application-name" content="Jorgemht.dev">
+<meta name="apple-mobile-web-app-title" content="Jorgemht.dev"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/" /><link rel="prev" href="https://jorgemht.dev/posts/swift-guia/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Variables, Constantes y Tipos de datos",
+        "inLanguage": "es",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/jorgemht.dev\/posts\/swift-variablesconstantestiposdatos\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/jorgemht.dev\/posts\/swift-variablesconstantestiposdatos\/featured-image.png",
+                            "width":  1420 ,
+                            "height":  708 
+                        }],"genre": "posts","keywords": "Swift","wordCount":  653 ,
+        "url": "https:\/\/jorgemht.dev\/posts\/swift-variablesconstantestiposdatos\/","datePublished": "2021-01-28T10:10:00+00:00","dateModified": "2021-01-28T10:10:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Autor"},"author": {
+                "@type": "Person",
+                "name": "Autor"
+            },"description": "Variables, constantes y tipos de datos en Swift 5.3"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="fixed"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jorgemht.dev" class="header-logo">jorgemht dev</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="Posts"> Posts </a><a class="menu-item" href="/about/" title="Sobre mí"> Sobre mí </a><a class="menu-item" href="/tags/" title="Etiquetas"> Etiquetas </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jorgemht.dev" class="header-logo">jorgemht dev</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="Posts">Posts</a><a class="menu-item" href="/about/" title="Sobre mí">Sobre mí</a><a class="menu-item" href="/tags/" title="Etiquetas">Etiquetas</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><main class="main"><div class="container content-article  theme-classic"><div class="toc" id="toc-auto">
+            <div class="toc-title">Contenido</div>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="header-post">
+        <div class="post-title">
+
+            <div class="post-all-meta">
+            <div class="breadcrumbs">
+    <a href="/">Inicio </a>/ <a href="/"> Variables, Constantes y Tipos de datos </a>
+</div>
+            <h1 class="single-title animated flipInX">Variables, Constantes y Tipos de datos</h1><div class="post-meta">
+                <div class="post-meta-line">&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time class="timeago" datetime="2021-01-28">28 01 2021</time>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;653 palabras
+                    &nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;4 minutos</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+        <article class="single toc-start">
+
+        <div class="content-block content-block-first content-block-position">
+
+        <div class="post"><div class="image-theme-classic">
+                <img src="/posts/swift-variablesconstantestiposdatos/featured-image.png" style="width: 100%">
+            </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contenido</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#variables-y-constantes">Variables y constantes</a></li>
+    <li><a href="#type-aliases">Type Aliases</a></li>
+    <li><a href="#tipos-de-datos-básicos">Tipos de datos básicos</a></li>
+  </ul>
+</nav></div>
+            </div><p>Este post pertenece a una <a href="http://jorgemht.dev/posts/swift-guia/" target="_blank" rel="noopener noreffer">serie de tutoriales de Swift 5.3</a>. En esta ocasión vamos a ver qué son las <strong>variables, las constantes y que tipo de datos tenemos en Swift</strong>.</p>
+<h2 id="variables-y-constantes">Variables y constantes</h2>
+<p>Utilizar variables y constantes en Swift para almacenar información es muy simple. Las <strong>variables</strong> siempre se inicializan con la palabra clave <strong>var</strong> mientras que las <strong>constantes</strong> siempre se inicializan con la palabra <strong>let</strong> y  ambas siempre se deben declarar antes de usarse.</p>
+<p>La <strong>variable</strong> almacena datos que se pueden modificar cuando lo necesitemos.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">str</span> <span class="p">=</span> <span class="s">&#34;Hello, playground&#34;</span>
+<span class="n">str</span> <span class="p">=</span> <span class="s">&#34;Yeehh, I can change the value&#34;</span>
+</code></pre></div><p>Mientras una <strong>constante</strong> los datos que se almacenan no se pueden modificar, es decir, sus valores son inmutables.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">strConstan</span> <span class="p">=</span> <span class="s">&#34;Hello, playground&#34;</span>
+<span class="n">strConstan</span> <span class="p">=</span> <span class="s">&#34;I can not change the value&#34;</span> <span class="c1">// Error</span>
+</code></pre></div><blockquote>
+<p><strong>Nota importante:</strong>  <em>Es más eficiente para la memoria usar constantes en vez de variables.</em></p>
+</blockquote>
+<p>Otra alternativa para declarar las variables sería usando los <strong>type annotations</strong>. Si conocemos que nuestra variable <em>str</em> va a ser de tipo cadena (String) se lo podemos especificar escribiendo :String después del nombre nuestra variable o constante declarada.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">str</span><span class="p">:</span><span class="nb">String</span>
+<span class="n">str</span> <span class="p">=</span> <span class="s">&#34;Hello, playground&#34;</span>
+</code></pre></div><p>Si nos finamos en el código anterior, hemos declarado una variable, dos puntos y le hemos especificado de “que tipo” es. En este caso estamos declarando una variable llamada str que va a ser una cadena de texto.</p>
+<p>Si nos fijamos en los ejemplos del principio no hemos especificado el tipo de dato que íbamos a usar. Esto se debe a la <strong><strong>inferencia de datos</strong></strong>, es decir, al asignar un valor a la variable al momento de su creación el compilador determina por nosotros cuál es el tipo de dato a usar.</p>
+<blockquote>
+<p><strong>Nota importante:</strong> <em>Swift siempre quiere saber de qué tipo de dato va a ser nuestra variable o constante.  Si no le especificamos el tipo de dato y no inicializamos una variable nos dará un error.</em></p>
+</blockquote>
+<p>Como curiosidad los nombres de las variables y constantes pueden contener prácticamente cualquier carácter, incluyendo caracteres  <a href="https://es.wikipedia.org/wiki/Unicode" target="_blank" rel="noopener noreffer">Unicode</a>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="err">🐶</span> <span class="p">=</span> <span class="err">“</span><span class="n">Dog</span><span class="err">”</span> 
+</code></pre></div><h2 id="type-aliases">Type Aliases</h2>
+<p>Con los <strong>type aliases</strong> podemos definir un nuevo nombre para un tipo de dato ya existentes en Swift, es decir, los <strong>type aliases no crea nuevos tipos</strong>.  Son bastantes útiles cuando deseamos hacer referencia a un tipo existente por un nombre que sea contextualmente más apropiado. Para usarlo solo necesitamos usar la palabra reservada <code>typealias</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-Swift" data-lang="Swift"><span class="kd">typealias</span> <span class="n">url</span> <span class="p">=</span> <span class="nb">String</span>
+<span class="kd">let</span> <span class="nv">name</span><span class="p">:</span><span class="n">url</span> <span class="p">=</span> <span class="s">&#34;jorgemht.dev&#34;</span>
+</code></pre></div><h2 id="tipos-de-datos-básicos">Tipos de datos básicos</h2>
+<p>En la siguiente tabla tenemos los tipos básicos que podemos usar la hora de crear nuestras <strong>variables</strong> o <strong>constantes</strong>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Operador</strong></th>
+<th><strong>Uso</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>String</strong></td>
+<td>Cadena de caracteres, tratada internamente con una matriz (array) de ellos</td>
+</tr>
+<tr>
+<td><strong>Int</strong></td>
+<td>Número entero de 32 bits con un rango de entre -2.147.483.648 y 2,147,483,647</td>
+</tr>
+<tr>
+<td><strong>Float</strong></td>
+<td>Número flotante de 32 bits con hasta 6 decimales de precisión</td>
+</tr>
+<tr>
+<td><strong>Double</strong></td>
+<td>Número flotante de 64 bits con hasta 15 decimales de precisión</td>
+</tr>
+<tr>
+<td><strong>Bool</strong></td>
+<td>Número booleano que indica si un valor es true (1) o false(0).</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">nick</span><span class="p">:</span> <span class="nb">String</span>
+<span class="n">nick</span> <span class="p">=</span> <span class="s">&#34;Jorgemhtdev&#34;</span>
+<span class="c1">//var nick = &#34;Jorgemhtdev&#34;</span>
+
+<span class="bp">print</span><span class="p">(</span><span class="n">nick</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nv">age</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">18</span>
+<span class="n">age</span> <span class="p">=</span> <span class="mi">18</span>
+<span class="c1">//var age = 18</span>
+
+<span class="bp">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nv">discount</span><span class="p">:</span> <span class="nb">Float</span>
+<span class="n">discount</span> <span class="p">=</span> <span class="mi">20</span>
+<span class="c1">//var discount = 20.0 //Double</span>
+<span class="c1">//var discount = Float(20.0) // Float</span>
+
+<span class="bp">print</span><span class="p">(</span><span class="n">discount</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nv">va</span><span class="p">:</span> <span class="nb">Double</span>
+<span class="n">va</span> <span class="p">=</span> <span class="mf">20.0</span> <span class="c1">//Double</span>
+<span class="c1">//var va = 20</span>
+
+<span class="bp">print</span><span class="p">(</span><span class="n">va</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nv">login</span><span class="p">:</span> <span class="nb">Bool</span>
+<span class="n">login</span> <span class="p">=</span> <span class="kc">true</span>
+<span class="c1">//var login = false</span>
+
+<span class="bp">print</span><span class="p">(</span><span class="n">login</span><span class="p">)</span>
+</code></pre></div><p>Cuando se trata de números como -20.0, Swift va a inferir que es <strong>Double</strong> en vez de un <strong>Float</strong>.  Esto sucede porque Swift puede inferir que tipo de dato debe utilizar la variable, basándose en el tipo de dato que estamos almacenando. En este caso, al introducir un número con decimales determina que es de tipo <em>Double</em> si no le especificamos lo contrario</p>
+<p>Para evitar eso debemos o bien especificar de qué tipo va a ser nuestra variable o bien tenemos la opción de inicializar esa variable con el constructor de Float <em>(var discount = Float(20.0))</em></p></div>
+
+            <div class="post"><div class="post-info-share">
+    <span><a class="share-icon share-twitter" href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/" data-title="Variables, Constantes y Tipos de datos" data-via="jorgemhtdev" data-hashtags="Swift"><i class="fab fa-twitter fa-fw"></i></a><a class="share-icon share-facebook" href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/" data-hashtag="Swift"><i class="fab fa-facebook-square fa-fw"></i></a><a class="share-icon share-linkedin" href="javascript:void(0);" title="Compartir en Linkedin" data-sharer="linkedin" data-url="https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/"><i class="fab fa-linkedin fa-fw"></i></a><a class="share-icon share-whatsapp" href="javascript:void(0);" title="Compartir en WhatsApp" data-sharer="whatsapp" data-url="https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/" data-title="Variables, Constantes y Tipos de datos" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a class="share-icon share-reddit" href="javascript:void(0);" title="Compartir en Reddit" data-sharer="reddit" data-url="https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/"><i class="fab fa-reddit fa-fw"></i></a></span>
+</div><div class="post-footer" id="post-footer"><div class="post-navigation"><div class="post-nav-box nav-box-prev">
+            <a class="nav-box" href="/posts/swift-guia/"><span class="nav-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="chevron-circle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"></path></svg></span><div style="text-align: right;padding-left: 10px"><div class="nav-text-h">Próximo artículo</div><span class="nav-text">Guía de Swift 5.3</span></div></a>
+        </div></div></div>
+</div>
+        </div>
+    <div id="toc-final"></div>
+    </article><div class=" post-tags post-tags-toc "><a href="/tags/swift/" class="tag">Swift</a></div></div></main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span>2021</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Volver arriba">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentarios">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":10},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script src="/js/theme.min.js"></script><script src="/js/jquery-3.5.1.min.js"></script></body>
+</html>

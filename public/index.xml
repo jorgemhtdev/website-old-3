@@ -3,7 +3,21 @@
         <title>Jorgemht.dev</title>
         <link>https://jorgemht.dev/</link>
         <description>Pagina web dedicada al desarrollo de aplicaciones para el ecosistema de Apple</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Thu, 28 Jan 2021 10:10:00 &#43;0000</lastBuildDate>
             <atom:link href="https://jorgemht.dev/index.xml" rel="self" type="application/rss+xml" />
-        </channel>
+        <item>
+    <title>Variables, Constantes y Tipos de datos</title>
+    <link>https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/</link>
+    <pubDate>Thu, 28 Jan 2021 10:10:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/</guid>
+    <description><![CDATA[Variables, constantes y tipos de datos en Swift 5.3]]></description>
+</item><item>
+    <title>Guía de Swift 5.3</title>
+    <link>https://jorgemht.dev/posts/swift-guia/</link>
+    <pubDate>Thu, 28 Jan 2021 10:09:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>https://jorgemht.dev/posts/swift-guia/</guid>
+    <description><![CDATA[Calendario de los próximos post sobre swift 5.3]]></description>
+</item></channel>
 </rss>
