@@ -14,21 +14,31 @@ theme = "uBlogger"
   [[menu.main]]
     identifier = "posts"
     # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
+    # pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
+    #post = ""
     name = "Posts"
     url = "/posts/"
     title = "Posts"
     weight = 1
   [[menu.main]]
+    identifier = "about"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    #pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    #post = ""
+    name = "Sobre mí"
+    url = "/about/"
+    title = "Sobre mí"
+    weight = 2
+  [[menu.main]]
     identifier = "tags"
-    pre = ""
-    post = ""
+    #pre = ""
+    #post = ""
     name = "Etiquetas"
     url = "/tags/"
     title = "Etiquetas"
-    weight = 2
+    weight = 3
 
 # Markup related configuration in Hugo
 [markup]
@@ -76,7 +86,7 @@ theme = "uBlogger"
 
 # Search config
   [params.search]
-    enable = true
+    enable = false
     # type of search engine ("lunr", "algolia")
     type = "lunr"
     # max index length of the chunked content
@@ -101,7 +111,7 @@ theme = "uBlogger"
     # desktop header mode ("fixed", "normal", "auto")
     desktopMode = "fixed"
     # mobile header mode ("fixed", "normal", "auto")
-    mobileMode = "auto"
+    mobileMode = "fixed"
 
 # Header title config
     [params.header.title]
@@ -163,7 +173,7 @@ theme = "uBlogger"
       # title shown in home page (HTML format is supported)
       # title = ""
       # subtitle shown in home page
-      subtitle = "Bienvenidos a mi blog"
+      subtitle = "Aprender. Crear. Contribuir."
       # whether to use typeit animation for subtitle
       typeit = true 
       # whether to show social links
