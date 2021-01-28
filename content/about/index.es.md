@@ -28,6 +28,6 @@ A raíz del confinamiento que sufrimos en España en marzo 2020 por la COVID vol
 
 Para este 2021 quiero darle un empujón a mis conocimientos en **Swift**, **UIKit**, **Swift UI** y ser más constante respecto al año anterior. A través de este [blog](https://jorgemht.dev) y de mi canal de [YouTube](https://www.youtube.com/channel/UCpXxJL296s-gYd3OUu4Cpfw) compartiré lo que voy aprendiendo en mi nueva etapa.
 
-![jorgemhtdev]()
+![jorgemhtdev](https://github.com/jorgemhtdev/J/blob/main/public/images/jorgemht.jpg)
 
 Gracias por llegar hasta el final. Happy coding.
