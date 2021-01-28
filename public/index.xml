@@ -3,14 +3,7 @@
         <title>Jorgemht.dev</title>
         <link>https://jorgemht.dev/</link>
         <description>Pagina web dedicada al desarrollo de aplicaciones para el ecosistema de Apple</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 25 Jan 2021 10:09:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>es</language>
             <atom:link href="https://jorgemht.dev/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>Example</title>
-    <link>https://jorgemht.dev/posts/guia-swift/</link>
-    <pubDate>Mon, 25 Jan 2021 10:09:00 &#43;0000</pubDate>
-    <author>Autor</author>
-    <guid>https://jorgemht.dev/posts/guia-swift/</guid>
-    <description><![CDATA[  ]]></description>
-</item></channel>
+        </channel>
 </rss>
