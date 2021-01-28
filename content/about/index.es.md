@@ -14,6 +14,8 @@ Todas las opiniones son importantes, así que cualquier comentario, crítica (co
 
 ### Mi historia 
 
+<img alt="foto mia" src="https://github.com/jorgemhtdev/J/blob/main/public/images/jorgemht.jpg" width="250" height="250"/>
+
 Comencé con el desarrollo móvil como hobby a finales de 2013 con Objective C y con Swift en sus primeros comienzos cuando fue presentado por Apple en la WWDC en 2014.
 
 Mi primera App publicada fue en 2014 con Apache Córdova (HTML, CSS, JS) y durante 2 años aproximadamente estuve trabajando con tecnología .NET, PHP y realizando Apps con Apache Córdova.
@@ -27,7 +29,5 @@ Con el paso de los años fui centrándome más al desarrollo móvil y a mediados
 A raíz del confinamiento que sufrimos en España en marzo 2020 por la COVID volví a interesarme por el desarrollo nativo de Apple y fui aprendiendo tanto Swift como Swift UI.
 
 Para este 2021 quiero darle un empujón a mis conocimientos en **Swift**, **UIKit**, **Swift UI** y ser más constante respecto al año anterior. A través de este [blog](https://jorgemht.dev) y de mi canal de [YouTube](https://www.youtube.com/channel/UCpXxJL296s-gYd3OUu4Cpfw) compartiré lo que voy aprendiendo en mi nueva etapa.
-
-![jorgemhtdev](https://github.com/jorgemhtdev/J/blob/main/public/images/jorgemht.jpg)
 
 Gracias por llegar hasta el final. Happy coding.
