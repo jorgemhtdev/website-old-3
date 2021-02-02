@@ -3,9 +3,16 @@
         <title>Jorgemht.dev</title>
         <link>https://jorgemht.dev/</link>
         <description>Pagina web dedicada al desarrollo de aplicaciones para el ecosistema de Apple</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Thu, 28 Jan 2021 10:10:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><lastBuildDate>Mon, 01 Feb 2021 10:09:00 &#43;0000</lastBuildDate>
             <atom:link href="https://jorgemht.dev/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Controles de flujo</title>
+    <link>https://jorgemht.dev/posts/swift-controlesdeflujo/</link>
+    <pubDate>Mon, 01 Feb 2021 10:09:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>https://jorgemht.dev/posts/swift-controlesdeflujo/</guid>
+    <description><![CDATA[Controles de flujo en Swift en 5.3]]></description>
+</item><item>
     <title>Variables, Constantes y Tipos de datos</title>
     <link>https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/</link>
     <pubDate>Thu, 28 Jan 2021 10:10:00 &#43;0000</pubDate>

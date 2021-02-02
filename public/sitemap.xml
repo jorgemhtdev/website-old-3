@@ -2,11 +2,12 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://jorgemht.dev/posts/swift-controlesdeflujo/</loc><lastmod>2021-02-01T10:09:00&#43;00:00</lastmod></url><url>
             <loc>https://jorgemht.dev/posts/swift-variablesconstantestiposdatos/</loc><lastmod>2021-01-28T10:10:00&#43;00:00</lastmod></url><url>
             <loc>https://jorgemht.dev/posts/swift-guia/</loc><lastmod>2021-01-28T10:09:00&#43;00:00</lastmod></url><url>
             <loc>https://jorgemht.dev/about/</loc><lastmod>2021-01-28T10:09:00&#43;00:00</lastmod></url><url>
-            <loc>https://jorgemht.dev/</loc><lastmod>2021-01-28T10:10:00&#43;00:00</lastmod></url><url>
-            <loc>https://jorgemht.dev/posts/</loc><lastmod>2021-01-28T10:10:00&#43;00:00</lastmod></url><url>
-            <loc>https://jorgemht.dev/tags/swift/</loc><lastmod>2021-01-28T10:10:00&#43;00:00</lastmod></url><url>
-            <loc>https://jorgemht.dev/tags/</loc><lastmod>2021-01-28T10:10:00&#43;00:00</lastmod></url><url>
+            <loc>https://jorgemht.dev/</loc><lastmod>2021-02-01T10:09:00&#43;00:00</lastmod></url><url>
+            <loc>https://jorgemht.dev/posts/</loc><lastmod>2021-02-01T10:09:00&#43;00:00</lastmod></url><url>
+            <loc>https://jorgemht.dev/tags/swift/</loc><lastmod>2021-02-01T10:09:00&#43;00:00</lastmod></url><url>
+            <loc>https://jorgemht.dev/tags/</loc><lastmod>2021-02-01T10:09:00&#43;00:00</lastmod></url><url>
             <loc>https://jorgemht.dev/categories/</loc></url></urlset>
