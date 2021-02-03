@@ -110,3 +110,9 @@ print(login)
 Cuando se trata de números como -20.0, Swift va a inferir que es **Double** en vez de un **Float**.  Esto sucede porque Swift puede inferir que tipo de dato debe utilizar la variable, basándose en el tipo de dato que estamos almacenando. En este caso, al introducir un número con decimales determina que es de tipo *Double* si no le especificamos lo contrario
 
 Para evitar eso debemos o bien especificar de qué tipo va a ser nuestra variable o bien tenemos la opción de inicializar esa variable con el constructor de Float *(var discount = Float(20.0))*
+
+--- 
+
+¡Gracias por leer!
+
+Si disfrutó de esta publicación, asegúrese de [seguirme en Twitter](https://twitter.com/Jorgemhtdev) y [en Github](https://github.com/jorgemhtdev) para mantenerse al día con el nuevo contenido. 

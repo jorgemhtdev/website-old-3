@@ -56,7 +56,7 @@ theme = "uBlogger"
   # site keywords
   keywords = ["Swift", "Swift UI"]
   # site default theme ("light", "dark", "auto")
-  defaultTheme = "auto"
+  defaultTheme = "light"
   # public git repo url only then enableGitInfo is true
   #  gitRepo = ""
   # which hash function used for SRI, when empty, no SRI is used
