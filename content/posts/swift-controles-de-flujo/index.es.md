@@ -449,6 +449,7 @@ Al usar la palabra clave **continue** saltamos la instrucción de print cuando n
 998
 1000
 ```
+
 --- 
 
 ¡Gracias por leer!
